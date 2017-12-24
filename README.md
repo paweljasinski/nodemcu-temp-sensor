@@ -11,7 +11,8 @@ What you need:
 - env to flash esp/upload code to esp (pc)
 
 Wiring:
-  
+ 
+``` 
   +-----+---------------+--------------->> +3.3
   |     |               |                                  
   |     |          ---------------------           ------ 
@@ -27,6 +28,7 @@ Wiring:
   |     |               |       |
   |     |               |       |
   +-----+---------------+-------+------->> GND
+```
 
 What needs to be configured in config.lue:
 - access point name and key
