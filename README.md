@@ -10,6 +10,9 @@ What you need:
 - usb power supplier
 - env to flash esp/upload code to esp (pc)
 
+Note: you can use different KTX-81-xxx sensor and adjust the resistor values.
+For example, using KTX-81-210, replace 1k with 2k, 3k3 with 6k8.
+
 Wiring:
  
 ``` 
@@ -34,14 +37,19 @@ What needs to be configured in config.lue:
 - access point name and key
 
 Firmware:
-1. floating build
-2. enabled modules: ads1115,encoder,file,gpio,http,i2c,net,node,rtctime,sntp,tmr,uart,wifi
+- float build
+- enabled modules: ads1115,encoder,file,gpio,http,i2c,net,node,rtctime,sntp,tmr,uart,wifi
 
 What happens on boot:
-1. wifi is up, ip is obtained
-2. time is synchronized using ntp
-3. once a minute write utc timestamp and input reading to temp.log file
+- wifi is up, ip is obtained
+- time is synchronized using ntp
+- once a minute write utc timestamp and input reading to temp.log file
 
 TODO:
-1. provide temperature reading in Celcius
-2. a way to retrieve temp.log (other than esplorer)
+- store temperature reading in Celcius
+- provide current reading via API
+- a way to retrieve temp.log via API
+
+Why not to use build-in analog input of esp.
+The build in analog converter is 10 bit and measure relative to GND 
+(no differential mode). Small changes of temperature produce changes smaller than resolution of this DAC.
