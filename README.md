@@ -79,7 +79,7 @@ The exact calculation:
 - discrete steps per °C: 99/70 = 1.41 which is less than 2 discrete steps per °C
 
 
-##References:
+## References:
 [KTY81 series Silicon temperature sensors](http://www.micropik.com/PDF/KTY81.pdf)
 
 [General Silicon sensors for temperature measurement](https://www.mikrocontroller.net/attachment/243481/KTY-Philips.pdf)
